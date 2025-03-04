@@ -36,36 +36,44 @@ int main(void) {
 	cyBot_uart_init_clean();  // Clean UART1 initialization, before running your UART1 GPIO init code
 
 //  Complete this code for configuring the GPIO PORTB part of UART1 initialization (your UART1 GPIO init code)
-    SYSCTL_RCGCGPIO_R |= 0b10;
-
-    while (!(SYSCTL_PRGPIO_R & 0b000010)) {};
-
-	GPIO_PORTB_DEN_R |= 0b11111111;
-
-	GPIO_PORTB_AFSEL_R |= 0b11111111;
-
-    GPIO_PORTB_PCTL_R &= 0xFFFFFF00;     // Force 0's in the desired locations
-
-    GPIO_PORTB_PCTL_R |= 0x11;     // Force 1's in the desired locations
-
-//  Or see the notes for a coding alternative to assign a value to the PCTL field
-
-//  (Uncomment ME for UART init part of lab)
-    cyBot_uart_init_last_half();  // Complete the UART device configuration
+//    SYSCTL_RCGCGPIO_R |= 0b10;
+//
+//    while (!(SYSCTL_PRGPIO_R & 0b000010)) {};
+//
+//	GPIO_PORTB_DEN_R |= 0xFF;
+//
+//	GPIO_PORTB_AFSEL_R |= 0xFF;
+//
+//    GPIO_PORTB_PCTL_R &= 0xFFFFFF00;     // Force 0's in the desired locations
+//
+//    GPIO_PORTB_PCTL_R |= 0x11;     // Force 1's in the desired locations
+//
+////  Or see the notes for a coding alternative to assign a value to the PCTL field
+//
+////  (Uncomment ME for UART init part of lab)
+//    cyBot_uart_init_last_half();  // Complete the UART device configuration
 
 //  Initialize the scan
-	cyBOT_init_Scan(0b);
+	cyBOT_init_Scan(0b111);
 
 //  Remember servo calibration function and variables from Lab 3
 
-	// YOUR CODE HERE
-
-	while(1)
-	{
-
-      // YOUR CODE HERE
 
 
-	}
+    char* message[50];
+    sprintf(message, "Reset\r\n");
+    sendMessage(message);
 
+    // YOUR CODE HERE
+    int data;
+    while(1)
+    {
+        data = button_getButton();
+        if (data != 0) {
+            sprintf(message, "%d\r\n", data);
+            sendMessage(message);
+        }
+        lcd_printf("%d", data);
+        while (data == button_getButton()) {}
+    }
 }

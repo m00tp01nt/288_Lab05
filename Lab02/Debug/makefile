@@ -20,6 +20,7 @@ ORDERED_OBJS += \
 "./open_interface.obj" \
 "./servo.obj" \
 "./tm4c123gh6pm_startup_ccs.obj" \
+"./uart.obj" \
 "../libcybotScan.lib" \
 "../libcybotUART.lib" \
 "../tm4c123gh6pm.cmd" \
@@ -153,8 +154,8 @@ Lab02.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Timer.obj" "bump_handlers.obj" "button.obj" "lab5_template.obj" "lcd.obj" "messages.obj" "movement.obj" "open_interface.obj" "servo.obj" "tm4c123gh6pm_startup_ccs.obj" 
-	-$(RM) "Timer.d" "bump_handlers.d" "button.d" "lab5_template.d" "lcd.d" "messages.d" "movement.d" "open_interface.d" "servo.d" "tm4c123gh6pm_startup_ccs.d" 
+	-$(RM) "Timer.obj" "bump_handlers.obj" "button.obj" "lab5_template.obj" "lcd.obj" "messages.obj" "movement.obj" "open_interface.obj" "servo.obj" "tm4c123gh6pm_startup_ccs.obj" "uart.obj" 
+	-$(RM) "Timer.d" "bump_handlers.d" "button.d" "lab5_template.d" "lcd.d" "messages.d" "movement.d" "open_interface.d" "servo.d" "tm4c123gh6pm_startup_ccs.d" "uart.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
