@@ -23,6 +23,8 @@ lab5_template.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/includ
 lab5_template.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 lab5_template.obj: ../cyBot_uart.h
 lab5_template.obj: C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
+lab5_template.obj: ../uart.h
+lab5_template.obj: ../messages.h
 lab5_template.obj: ../cyBot_Scan.h
 
 ../lab5_template.c:
@@ -70,6 +72,10 @@ C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 ../cyBot_uart.h:
 
 C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
+
+../uart.h:
+
+../messages.h:
 
 ../cyBot_Scan.h:
 

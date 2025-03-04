@@ -22,7 +22,8 @@ C_SRCS += \
 ../movement.c \
 ../open_interface.c \
 ../servo.c \
-../tm4c123gh6pm_startup_ccs.c 
+../tm4c123gh6pm_startup_ccs.c \
+../uart.c 
 
 C_DEPS += \
 ./Timer.d \
@@ -34,7 +35,8 @@ C_DEPS += \
 ./movement.d \
 ./open_interface.d \
 ./servo.d \
-./tm4c123gh6pm_startup_ccs.d 
+./tm4c123gh6pm_startup_ccs.d \
+./uart.d 
 
 OBJS += \
 ./Timer.obj \
@@ -46,7 +48,8 @@ OBJS += \
 ./movement.obj \
 ./open_interface.obj \
 ./servo.obj \
-./tm4c123gh6pm_startup_ccs.obj 
+./tm4c123gh6pm_startup_ccs.obj \
+./uart.obj 
 
 OBJS__QUOTED += \
 "Timer.obj" \
@@ -58,7 +61,8 @@ OBJS__QUOTED += \
 "movement.obj" \
 "open_interface.obj" \
 "servo.obj" \
-"tm4c123gh6pm_startup_ccs.obj" 
+"tm4c123gh6pm_startup_ccs.obj" \
+"uart.obj" 
 
 C_DEPS__QUOTED += \
 "Timer.d" \
@@ -70,7 +74,8 @@ C_DEPS__QUOTED += \
 "movement.d" \
 "open_interface.d" \
 "servo.d" \
-"tm4c123gh6pm_startup_ccs.d" 
+"tm4c123gh6pm_startup_ccs.d" \
+"uart.d" 
 
 C_SRCS__QUOTED += \
 "../Timer.c" \
@@ -82,6 +87,7 @@ C_SRCS__QUOTED += \
 "../movement.c" \
 "../open_interface.c" \
 "../servo.c" \
-"../tm4c123gh6pm_startup_ccs.c" 
+"../tm4c123gh6pm_startup_ccs.c" \
+"../uart.c" 
 
 
